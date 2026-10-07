@@ -106,23 +106,23 @@
     .faq summary::after { content:"+"; position:absolute; top:50%; right:20px; transform:translateY(-50%); color:var(--navy); font-size:1.45rem; font-weight:400; }
     .faq details[open] summary::after { content:"−"; }
     .faq details p { margin:0; padding:0 20px 19px; color:var(--muted); font-size:.94rem; }
-    .notice,.regulation { padding:18px; border-radius:var(--radius); }
-    .notice { display:flex; flex-direction:column; align-items:flex-start; gap:10px; border:1px solid #efdaa0; background:linear-gradient(135deg,#fffaf0,#fff4cf); box-shadow:0 8px 24px rgba(133,100,18,.06); min-height:100%; }
-    .notice-icon { flex:0 0 auto; display:grid; place-items:center; width:46px; height:46px; border-radius:14px; color:#7a5b0d; background:#ffd76d; }
+    .notice,.regulation { padding:20px; border-radius:var(--radius); }
+    .notice { display:grid; grid-template-columns:48px minmax(0,1fr); align-items:start; gap:16px; border:1px solid #efdaa0; background:linear-gradient(135deg,#fffaf0,#fff4cf); box-shadow:0 8px 24px rgba(133,100,18,.06); min-height:100%; }
+    .notice-icon { flex:0 0 auto; display:grid; place-items:center; width:48px; height:48px; border-radius:14px; color:#7a5b0d; background:#ffd76d; }
     .notice-icon svg { width:23px; height:23px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-    .notice h3,.regulation h3 { margin:0 0 7px; font-size:1rem; }
-    .notice p,.regulation p { margin:0; font-size:.8rem; line-height:1.42; }
+    .notice h3,.regulation h3 { margin:0 0 8px; font-size:1.02rem; line-height:1.2; }
+    .notice p,.regulation p { margin:0; font-size:.8rem; line-height:1.44; }
     .notice p { color:#625a44; }
-    .notice p + p { margin-top:10px; }
+    .notice p + p { margin-top:12px; }
     .notice p strong { color:#4f3f19; }
-    .regulation { position:relative; overflow:hidden; display:grid; grid-template-columns:70px minmax(0,1fr); align-items:center; gap:12px; border:1px solid #f2c894; color:var(--ink); background:linear-gradient(135deg,#fffdf9,#fff2df); box-shadow:0 10px 28px rgba(194,94,20,.12); min-height:100%; }
+    .regulation { position:relative; overflow:hidden; display:grid; grid-template-columns:82px minmax(0,1fr); align-items:center; gap:16px; border:1px solid #f2c894; color:var(--ink); background:linear-gradient(135deg,#fffdf9,#fff2df); box-shadow:0 10px 28px rgba(194,94,20,.12); min-height:100%; }
     .regulation::after { content:""; position:absolute; right:-52px; bottom:-72px; width:150px; height:150px; border-radius:50%; background:rgba(239,126,28,.09); pointer-events:none; }
-    .regulation-cover { position:relative; z-index:1; width:70px; aspect-ratio:362/511; object-fit:cover; border:1px solid rgba(151,77,21,.16); border-radius:10px; box-shadow:0 9px 20px rgba(86,55,33,.18); }
-    .regulation-content { position:relative; z-index:1; min-width:0; }
-    .regulation-kicker { display:inline-flex; margin-bottom:7px; padding:3px 8px; border-radius:999px; color:#9d4813; background:#ffe0ba; font-size:.64rem; font-weight:850; letter-spacing:.07em; text-transform:uppercase; }
+    .regulation-cover { position:relative; z-index:1; width:82px; aspect-ratio:362/511; object-fit:cover; border:1px solid rgba(151,77,21,.16); border-radius:10px; box-shadow:0 9px 20px rgba(86,55,33,.18); }
+    .regulation-content { position:relative; z-index:1; min-width:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+    .regulation-kicker { display:inline-flex; margin-bottom:9px; padding:4px 9px; border-radius:999px; color:#9d4813; background:#ffe0ba; font-size:.62rem; font-weight:850; letter-spacing:.07em; text-transform:uppercase; }
     .regulation h3 { color:var(--navy-dark); line-height:1.2; }
     .regulation p { color:#665b51; font-size:.8rem; line-height:1.38; }
-    .regulation a { display:flex; width:100%; min-height:44px; align-items:center; justify-content:space-between; gap:10px; margin-top:12px; padding:10px 12px; border-radius:12px; color:white; background:linear-gradient(135deg,#df6418,#f29420); box-shadow:0 7px 16px rgba(205,91,18,.2); font-size:.8rem; font-weight:850; text-decoration:none; transition:transform .18s ease,box-shadow .18s ease; }
+    .regulation a { display:flex; width:100%; min-height:44px; align-items:center; justify-content:space-between; gap:10px; margin-top:14px; padding:10px 13px; border-radius:12px; color:white; background:linear-gradient(135deg,#df6418,#f29420); box-shadow:0 7px 16px rgba(205,91,18,.2); font-size:.8rem; font-weight:850; text-decoration:none; transition:transform .18s ease,box-shadow .18s ease; }
     .regulation a:hover { transform:translateY(-2px); box-shadow:0 10px 21px rgba(205,91,18,.25); }
     footer { color:#dce8ef; background:var(--navy-dark); padding:28px 0; }
     .footer-row { display:flex; align-items:center; justify-content:space-between; gap:24px; }
@@ -142,6 +142,9 @@
       .intro-row { padding-top:34px; gap:13px; }
       .cards,.support-grid { grid-template-columns:1fr; grid-auto-rows:auto; }
       .card-media,.support-grid .card-media { height:82px; flex-basis:82px; }
+      .notice { grid-template-columns:1fr; gap:12px; }
+      .regulation { grid-template-columns:72px minmax(0,1fr); }
+      .regulation-cover { width:72px; }
       .news-track { grid-auto-columns:86%; }
       .announcement { align-items:flex-start; flex-wrap:wrap; margin-top:22px; }
       .deadline-action { width:100%; justify-content:center; }
@@ -253,7 +256,7 @@
         </aside>
         <aside class="notice">
           <div class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v5M12 17.5h.01"/></svg></div>
-          <div><h3>Informação importante</h3><p>A submissão de um formulário não confere automaticamente direito ao apoio solicitado. Todos os pedidos estão sujeitos a análise, enquadramento regulamentar, interesse municipal e disponibilidade de recursos.</p><p><strong>Conta Google obrigatória:</strong> como os formulários permitem o carregamento de documentos, é necessário ter sessão iniciada numa conta Google para os preencher e submeter.</p></div>
+          <div class="notice-content"><h3>Informação importante</h3><p>A submissão de um formulário não confere automaticamente direito ao apoio solicitado. Todos os pedidos estão sujeitos a análise, enquadramento regulamentar, interesse municipal e disponibilidade de recursos.</p><p><strong>Conta Google obrigatória:</strong> como os formulários permitem o carregamento de documentos, é necessário ter sessão iniciada numa conta Google para os preencher e submeter.</p></div>
         </aside>
       </div>
 
